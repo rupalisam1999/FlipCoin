@@ -7,14 +7,19 @@ namespace FlipCoin
         static void Main(string[] args)
         {
             Random random = new Random();
-            int randomCheck = random.Next(0, 2);
+            int heads = 0;
+            for (int i = 0; i < 1000; i++) ;
+            int randomCheck = random.Next(2);
             if (randomCheck == 0)
             {
-                Console.WriteLine("HEAD");
+                heads++;
             }
-            else
             {
-                Console.WriteLine("TAIL");
+                Console.WriteLine("Times head was flipped:" + heads);
+            }
+            
+            {
+                Console.WriteLine("Times tail was flipped:" + (1000 - heads));
 
             }
         }
